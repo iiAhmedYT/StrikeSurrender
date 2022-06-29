@@ -1,0 +1,7 @@
+settings:
+  debug: false
+messages:
+  usage: '&cUSAGE: /<command>'
+  not-in-fight: '&fYou are currently &aNOT &fin a fight'
+  surrender: '&fYou have &fsurrendered &ffrom the current fight'
+  surrender-announce: '&fPlayer &b<player> &fhas surrendered successfully'

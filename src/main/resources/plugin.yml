@@ -1,0 +1,14 @@
+name: StrikeSurrender
+version: '${project.version}'
+main: dev.iiahmed.strikesurrender.StrikeSurrender
+authors: [ iiAhmedYT ]
+description: An addon to StrikePractice that gives you the ability to surrender and back off of your current game
+commands:
+  surrender:
+    description: 'The command that allows you to give your opponent the win by leaving your match'
+    aliases:
+      - forfeit
+      - ff
+      - concede
+      - leavefight
+      - leavematch
