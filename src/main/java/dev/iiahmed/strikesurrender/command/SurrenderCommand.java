@@ -36,6 +36,9 @@ public class SurrenderCommand implements CommandExecutor {
         player.setHealth(0);
         player.sendMessage(Message.SURRENDERED.toString());
         for(Player fightPlayer : fight.getPlayersInFight()) {
+            if(player == fightPlayer) {
+                continue;
+            }
             fightPlayer.sendMessage(Message.SURRENDER_ANNOUNCE.toString().replace("<player>", player.getName()));
         }
         return true;
