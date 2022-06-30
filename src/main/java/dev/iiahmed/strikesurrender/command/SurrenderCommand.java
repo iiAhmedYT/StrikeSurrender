@@ -18,6 +18,10 @@ public class SurrenderCommand implements CommandExecutor {
             return true;
         }
         Player player = (Player) sender;
+        if(!player.hasPermission("StrikePractice.surrender")) {
+            player.sendMessage(Message.NO_PERMISSIONS.toString());
+            return true;
+        }
         StrikePracticeAPI api = StrikePractice.getAPI();
         Fight fight = api.getFight(player);
         if(!api.isInFight(player) || fight == null) {

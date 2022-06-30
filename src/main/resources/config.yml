@@ -2,6 +2,7 @@ settings:
   debug: false
 messages:
   usage: '&cUSAGE: /<command>'
+  no-perms: '&cYou don''t have enough permissions to &mbe a coward&c execute this command'
   not-in-fight: '&fYou are currently &aNOT &fin a fight'
   surrender: '&fYou have &fsurrendered &ffrom the current fight'
   surrender-announce: '&fPlayer &b<player> &fhas surrendered successfully'

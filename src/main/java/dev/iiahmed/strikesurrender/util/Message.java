@@ -6,6 +6,7 @@ import net.md_5.bungee.api.ChatColor;
 public enum Message {
 
     ONLY_PLAYERS("only-players", "&cOnly players can execute this command"),
+    NO_PERMISSIONS("no-perms", "&cYou don't have enough permissions to &mbe a coward&c execute this command"),
     USAGE("usage", "&cUSAGE: /<command>"),
     NOT_IN_FIGHT("not-in-fight", "&fYou are currently &aNOT &fin a fight"),
     SURRENDERED("surrender", "&fYou have &fsurrendered &ffrom the current fight"),
