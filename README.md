@@ -1,7 +1,7 @@
 # StrikeSurrender
 
 ### Description
-For those who are afraid from fighting.
+For those who are afraid of fighting.
 
 > A wise man once said
 - 'i like ya cut g'
