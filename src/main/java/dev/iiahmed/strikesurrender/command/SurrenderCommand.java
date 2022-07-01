@@ -43,10 +43,14 @@ public class SurrenderCommand implements CommandExecutor {
 
         /* If this is a bestof kit (Expremntial) */
         List<String> teammates = fight.getTeammates(player);
-        if(fight.getKit().getBestOf() > 1 && teammates.size() == 1) {
+        if(fight.getKit().getBestOf() > 1) {
             Player firstOpponent = Bukkit.getPlayer(fight.getOpponents(player).get(0));
+            if(teammates.size() > 1) {
+                fight.handleDeath(player);
+            } else {
+                api.forceWin(firstOpponent);
+            }
             player.sendMessage(Message.SURRENDERED.toString());
-            api.forceWin(firstOpponent);
             for(Player fightPlayer : fight.getPlayersInFight()) {
                 if(player == fightPlayer) {
                     continue;
