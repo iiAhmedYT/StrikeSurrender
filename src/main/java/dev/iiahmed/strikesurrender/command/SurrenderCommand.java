@@ -37,7 +37,7 @@ public class SurrenderCommand implements CommandExecutor {
             return true;
         }
         if(args.length != 0) {
-            player.sendMessage(Message.USAGE.toString().replace("<command>", command.getName()));
+            player.sendMessage(Message.USAGE.toString().replace("<command>", label));
             return true;
         }
 
@@ -45,7 +45,7 @@ public class SurrenderCommand implements CommandExecutor {
         List<String> teammates = fight.getTeammates(player);
         if(fight.getKit().getBestOf() > 1) {
             Player firstOpponent = Bukkit.getPlayer(fight.getOpponents(player).get(0));
-            if(teammates.size() > 1) {
+            if(teammates.size() > 0) {
                 fight.handleDeath(player);
             } else {
                 api.forceWin(firstOpponent);
