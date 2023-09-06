@@ -10,8 +10,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import java.util.List;
-
 public class SurrenderCommand implements CommandExecutor {
 
     @Override
@@ -46,14 +44,9 @@ public class SurrenderCommand implements CommandExecutor {
         }
 
         /* BestOf kits handling */
-        List<String> teammates = fight.getTeammates(player);
-        if(fight.getKit().getBestOf() > 1) {
+        if (fight.getKit().getBestOf() > 1) {
             Player firstOpponent = Bukkit.getPlayer(fight.getOpponents(player).get(0));
-            if (!teammates.isEmpty()) {
-                fight.handleDeath(player);
-            } else {
-                api.forceWinFight(firstOpponent);
-            }
+            api.forceWinFight(firstOpponent);
             player.sendMessage(Message.SURRENDERED.toString());
             for (Player fighter : fight.getPlayersInFight()) {
                 if (player == fighter) {
