@@ -6,7 +6,7 @@
 
     <groupId>dev.iiahmed</groupId>
     <artifactId>StrikeSurrender</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
     <name>StrikeSurrender</name>
@@ -74,21 +74,13 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- IDE Sided Dependancies -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-            <scope>provided</scope>
-        </dependency>
-
         <!-- MC Provided Dependancies -->
         <dependency>
             <groupId>ga.strikepractice</groupId>
             <artifactId>StrikePractice</artifactId>
             <version>3.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/StrikePractice.jar</systemPath>
+            <systemPath>${project.basedir}/libs/strikepractice-api.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

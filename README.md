@@ -17,6 +17,11 @@ Like:
 - concede
 - leavefight
 - leavematch
+- retreat
+- withdraw
+- giveup
+- givein
+- yield
 
 ### Permissions
 

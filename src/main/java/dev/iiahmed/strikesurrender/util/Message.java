@@ -25,7 +25,7 @@ public enum Message {
     public String toString() {
         StrikeSurrender instance = StrikeSurrender.getInstance();
         String msg = instance.getConfig().getString("message." + path);
-        if(msg != null) {
+        if (msg != null) {
             return translate(msg);
         }
         return translate(defaultMessage);
