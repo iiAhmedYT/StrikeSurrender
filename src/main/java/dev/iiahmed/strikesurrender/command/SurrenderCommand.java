@@ -38,7 +38,7 @@ public class SurrenderCommand implements CommandExecutor {
         }
 
         long started = fight.getStarted();
-        if (started == 0L) {
+        if (started > System.currentTimeMillis()) {
             player.sendMessage(Message.NOT_IN_FIGHT.toString());
             return true;
         }
