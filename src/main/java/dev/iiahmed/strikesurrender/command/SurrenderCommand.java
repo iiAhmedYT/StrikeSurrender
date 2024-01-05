@@ -25,6 +25,11 @@ public class SurrenderCommand implements CommandExecutor {
             return true;
         }
 
+        if (args.length != 0) {
+            player.sendMessage(Message.USAGE.toString().replace("<command>", label));
+            return true;
+        }
+
         StrikePracticeAPI api = StrikePractice.getAPI();
         Fight fight = api.getFight(player);
         if (!api.isInFight(player) || fight == null) {
@@ -38,8 +43,8 @@ public class SurrenderCommand implements CommandExecutor {
             return true;
         }
 
-        if (args.length != 0) {
-            player.sendMessage(Message.USAGE.toString().replace("<command>", label));
+        if (fight.hasEnded()) {
+            player.sendMessage(Message.NOT_IN_FIGHT.toString());
             return true;
         }
 
